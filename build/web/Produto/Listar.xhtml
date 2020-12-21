@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:dataTable var="produto" value="${ProdutoMB.produto}">
+                <p:column headerText="Código"><h:outputText value="${produto.codigo}" /></p:column>
+                <p:column headerText="Nome"><h:outputText value="${produto.nome}" /></p:column>
+                <p:column headerText="Veículo"><h:outputText value="${produto.veiculo}" /></p:column>
+                <p:column headerText="Peso Líquido"><h:outputText value="${produto.pesoLiquido}" /></p:column>
+                <p:column headerText="Peso Bruto"><h:outputText value="${produto.pesoBruto}" /></p:column>
+                <p:column headerText="Data de Inclusão"><h:outputText value="${produto.dataInclusão}" /></p:column>
+            </p:dataTable>
+        </h:form>
+    </h:body>
+</html>

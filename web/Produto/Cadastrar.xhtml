@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>Cadastro de Produtos</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <p:messages id="messages" />
+            <p:panelGrid columns="2">
+
+                <p:outputLabel for="nome" value="Nome:" />
+                <p:inputText id="nome" value="${ProdutoMB.produto.nome}" />                
+                <p:outputLabel for="veiculo" value="Veículo:" />
+                <p:inputText id="veiculo" value="${ProdutoMB.produto.veiculo}" />
+                <p:outputLabel for="pesoLiquido" value="Peso Líquido:" />
+                <p:inputText id="pesoLiquido" value="${ProdutoMB.produto.pesoLiquido}" />
+                <p:outputLabel for="pesoBruto" value="Peso Bruto:" />
+                <p:inputText id="pesoBruto" value="${ProdutoMB.produto.pesoBruto}" />
+
+                <p:commandButton value="Cadastrar" icon="ui-icon-star"
+                                 action="${ProdutoMB.cadastraProduto()}" update="messages">
+                </p:commandButton>
+
+            </p:panelGrid>
+        </h:form>
+    </h:body>
+</html>
